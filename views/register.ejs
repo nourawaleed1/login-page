@@ -1,4 +1,4 @@
-<h1>REGISTER</h1>
+<!-- <h1>REGISTER</h1>
 <form action="/register" method="POST">
 <div>
    <label for="name">NAME</label> 
@@ -14,4 +14,135 @@
  </div>
  <button type="submit">Register</button>
 </form>
-<a href="/login">login</a>
+<a href="/login">login</a> -->
+
+
+<div class="login-wrapper">
+    
+    <form action="/register" method="POST" class="form">
+  <h1>REGISTER</h1>
+  <div class="input-group">
+    <!-- <label for="name">NAME</label>  -->
+   <input placeholder="NAME" type="text" id="name" name="name" required>
+  </div>
+  <div class="input-group">
+    <input placeholder="EMAIL" type="email" id="email" name="email" required>
+    <!-- id loginUser -->
+    <!-- <label class="nn" for="email">EMAIL</label>  -->
+  </div>
+  <div class="input-group">
+    <label for="password"></label> 
+    <input placeholder="PASSWORD" type="password" id="password" name="password" required>
+    <!-- id loginPassword -->
+  </div>
+  <button type="submit" class="submit-btn">Login</button>
+  <a href="/login"  class="forgot-pw">LOGIN</a>
+</form>
+  </form>
+</div>
+</div>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background: url('bg.jpg') no-repeat center;
+  background-size: cover; */
+  background-color: aliceblue;
+  font-family: sans-serif;
+
+}
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+.form::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255, 0.08);
+  transform: skewX(-26deg);
+  transform-origin: bottom left;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.form h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: #cdbeb8;
+}
+.form .input-group {
+  position: relative;
+}
+.form .input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+.form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .3s ease-out;
+}
+.form .input-group input:focus + label,
+.form .input-group input:valid + label {
+  transform: translateY(-18px);
+  color: #ebe2df;
+  font-size: .8rem;
+}
+.submit-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: #c8bdb9;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 900;
+    transition: 0.5s all;
+}
+    a:hover{
+    color: #cdbeb8;
+    font-size: 25px;
+    }
+</style>
